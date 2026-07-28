@@ -20,6 +20,17 @@ Create an `Idea` rule in **Settings → Community plugins → Block Tags**, then
 - Leaves Markdown source untouched; rules are stored in the plugin's `data.json`.
 - If a list item has multiple configured tags, the first matching tag controls the bullet. Each inline tag uses its own rule.
 
+## Install with BRAT
+
+1. Install and enable **BRAT** from Obsidian's Community plugins browser.
+2. Run **BRAT: Add a beta plugin for testing** from the command palette.
+3. Enter `spasm/block-tags` and select **Add Plugin**.
+4. Enable **Block Tags** under **Settings → Community plugins**.
+
+BRAT installs the latest GitHub release and can check it for future updates.
+
+Block Tags supports Obsidian 1.8.0 or newer on desktop and mobile.
+
 ## Development
 
 ```bash

@@ -18,6 +18,14 @@
   ],
   "author": "Jeff Scott",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spasm/block-tags.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spasm/block-tags/issues"
+  },
+  "homepage": "https://github.com/spasm/block-tags#readme",
   "devDependencies": {
     "@codemirror/state": "6.5.0",
     "@codemirror/view": "6.38.6",

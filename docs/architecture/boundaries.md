@@ -13,6 +13,7 @@ For each significant component, record its responsibility, owned data, public in
 | Editor decorator | Visible tag-token and matching list-marker decorations | CodeMirror 6 extension | Rule domain, CodeMirror 6 |
 | Reading decorator | Rendered tag and matching list-bullet decoration | Markdown post-processor function | Rule domain, rendered DOM |
 | Settings tab | Rule creation and color-family selection | Obsidian settings UI | Plugin lifecycle, rule domain |
+| Release packaging | BRAT-installable runtime bundle | GitHub release containing `main.js`, `manifest.json`, and `styles.css` | Tested source build and version metadata |
 
 ## Boundary rules
 
@@ -23,6 +24,7 @@ For each significant component, record its responsibility, owned data, public in
 - Make data ownership, trust boundaries, and failure ownership explicit.
 - Keep note source read-only. Visual state belongs only in editor/Reading-view DOM decorations.
 - Keep the repository at `/Users/jscott/projects/block-tags`; the ObsidiBrain development vault discovers it through `.obsidian/plugins/block-tags`.
+- Keep generated `main.js` out of normal source commits. Version tags publish the tested runtime bundle as GitHub release assets for BRAT.
 
 ## Prohibited shortcuts
 

@@ -11,6 +11,7 @@ Define one canonical path for each applicable validation activity. Agents should
 | Build/type check | `npm run build` | When compiled or typed code changes |
 | Combined local gate | `npm run check` | Before handoff |
 | Live plugin smoke test | `obsidian vault="ObsidiBrain" plugin:reload id=block-tags` followed by `obsidian vault="ObsidiBrain" dev:errors` | When plugin runtime behavior changes |
+| Release artifact check | Build, then confirm non-empty `main.js`, `manifest.json`, and `styles.css` with a tag equal to `manifest.json`'s version | Before publishing a version tag |
 | Architecture validation | `npx likec4 validate docs/architecture/model` | When LikeC4 sources change |
 
 Remove rows that do not apply and add project-specific gates when needed.

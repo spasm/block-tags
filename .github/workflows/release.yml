@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate and build
+        run: npm run check
+
+      - name: Verify release metadata and assets
+        shell: bash
+        run: |
+          manifest_version="$(node -p "require('./manifest.json').version")"
+          if [[ "$GITHUB_REF_NAME" != "$manifest_version" ]]; then
+            echo "Tag $GITHUB_REF_NAME does not match manifest version $manifest_version" >&2
+            exit 1
+          fi
+          for asset in main.js manifest.json styles.css; do
+            if [[ ! -s "$asset" ]]; then
+              echo "Missing or empty release asset: $asset" >&2
+              exit 1
+            fi
+          done
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "$GITHUB_REF_NAME"
+          main.js manifest.json styles.css
+          --verify-tag
+          --title "Block Tags $GITHUB_REF_NAME"
+          --generate-notes
