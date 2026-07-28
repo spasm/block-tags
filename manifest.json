@@ -1,0 +1,9 @@
+{
+  "id": "block-tags",
+  "name": "Block Tags",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.0",
+  "description": "Give inline tags and their list bullets coordinated, theme-aware colors.",
+  "author": "Jeff Scott",
+  "isDesktopOnly": false
+}

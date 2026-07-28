@@ -1,0 +1,92 @@
+.block-tags-editor-tag,
+.block-tags-reading-tag,
+.block-tags-palette-preview,
+.block-tags-editor-list-item,
+.block-tags-reading-list-item {
+  --block-tags-bg: var(--block-tags-bg-light);
+  --block-tags-fg: var(--block-tags-fg-light);
+  --block-tags-bullet: var(--block-tags-bullet-light);
+  --block-tags-ring: var(--block-tags-ring-light);
+}
+
+.theme-dark .block-tags-editor-tag,
+.theme-dark .block-tags-reading-tag,
+.theme-dark .block-tags-palette-preview,
+.theme-dark .block-tags-editor-list-item,
+.theme-dark .block-tags-reading-list-item {
+  --block-tags-bg: var(--block-tags-bg-dark);
+  --block-tags-fg: var(--block-tags-fg-dark);
+  --block-tags-bullet: var(--block-tags-bullet-dark);
+  --block-tags-ring: var(--block-tags-ring-dark);
+}
+
+.block-tags-editor-tag,
+.block-tags-reading-tag {
+  background-color: var(--block-tags-bg) !important;
+  color: var(--block-tags-fg) !important;
+  align-items: center;
+  display: inline-flex;
+  line-height: 1;
+  padding-block: 0.2em;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.block-tags-editor-tag {
+  border-radius: 4px;
+  padding-inline: 0.3em;
+}
+
+.block-tags-editor-tag > .cm-hashtag {
+  background: transparent !important;
+  border-radius: 0 !important;
+  color: inherit !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+}
+
+.block-tags-reading-tag,
+.block-tags-palette-preview {
+  border-radius: 4px !important;
+  padding-inline: 0.35em;
+}
+
+.block-tags-editor-list-item .list-bullet::after,
+.block-tags-reading-list-item > .list-bullet::after {
+  background-color: var(--block-tags-bullet) !important;
+}
+
+.block-tags-editor-list-item:has(.collapse-indicator.is-collapsed) .list-bullet::after,
+.block-tags-reading-list-item.is-collapsed > .list-bullet::after {
+  box-shadow: 0 0 0 4px var(--block-tags-ring) !important;
+}
+
+.block-tags-editor-list-item > .cm-formatting-list {
+  color: var(--block-tags-bullet) !important;
+}
+
+.block-tags-palette-preview {
+  background-color: var(--block-tags-bg);
+  color: var(--block-tags-fg);
+  align-items: center;
+  display: inline-flex;
+  line-height: 1;
+  margin-inline-end: var(--size-4-2);
+  padding-block: 0.2em;
+}
+
+.block-tags-rule-card {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  margin-block: var(--size-4-4);
+  padding: 0 var(--size-4-4) var(--size-4-2);
+}
+
+.block-tags-rule-heading {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.block-tags-invalid {
+  border-color: var(--text-error) !important;
+  box-shadow: 0 0 0 1px var(--text-error) !important;
+}

@@ -4,3 +4,14 @@
 *.db
 .beads-credential-key
 .beads/proxieddb/
+
+# Node and generated plugin artifacts
+node_modules/
+main.js
+*.map
+data.json
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
