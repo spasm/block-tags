@@ -15,4 +15,10 @@ describe("tag label alignment", () => {
       /\.block-tags-editor-tag > \.cm-hashtag\s*\{[^}]*line-height: inherit !important;[^}]*padding: 0 !important;/s,
     );
   });
+
+  it("neutralizes theme borders and border-like shadows on owned tag elements", () => {
+    expect(styles).toMatch(
+      /\.block-tags-editor-tag,\s*\.block-tags-editor-tag > \.cm-hashtag,\s*a\.tag\.block-tags-reading-tag\s*\{[^}]*border: 0 !important;[^}]*box-shadow: none !important;/s,
+    );
+  });
 });

@@ -1,6 +1,6 @@
 {
   "name": "block-tags",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Give Obsidian tags and their list bullets coordinated, theme-aware colors.",
   "main": "main.js",
   "type": "module",

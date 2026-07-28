@@ -32,6 +32,13 @@
   white-space: nowrap;
 }
 
+.block-tags-editor-tag,
+.block-tags-editor-tag > .cm-hashtag,
+a.tag.block-tags-reading-tag {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .block-tags-editor-tag {
   border-radius: 4px;
   padding-inline: 0.3em;

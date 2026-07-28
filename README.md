@@ -14,6 +14,7 @@ Create an `Idea` rule in **Settings → Community plugins → Block Tags**, then
 
 - Works in the Markdown editor and Reading view.
 - Renders each tag as one continuous, theme-aware label with modest corners and vertically centered text.
+- Prevents community themes from adding their own borders or border-like shadows to configured tags.
 - Colors only the bullet of a tagged list item; surrounding block background and text are untouched.
 - Preserves Obsidian's collapsed-bullet hierarchy with a lighter same-family outer ring.
 - Matches tags case-insensitively and supports nested tags such as `#idea/later`.

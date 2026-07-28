@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 — 2026-07-27
+
+- Prevent community themes from adding borders or border-like shadows to configured tag labels.
+
 ## 0.1.0 — 2026-07-27
 
 - Add configurable tag-to-palette rules.

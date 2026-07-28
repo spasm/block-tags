@@ -12,11 +12,11 @@ A user can add, enable/disable, edit, and remove a rule identified by an Obsidia
 
 ### BT-002 — Decorate Reading view
 
-For each rendered configured tag, the tag receives its coordinated surface/text colors in a continuous label with vertically centered text. If the tag is in a list item, only that item's bullet receives the family color. A collapsed item retains a stronger inner bullet and lighter same-family outer ring.
+For each rendered configured tag, the tag receives its coordinated surface/text colors in a continuous label with vertically centered text. The plugin suppresses borders and border-like shadows contributed by the active theme on that label. If the tag is in a list item, only that item's bullet receives the family color. A collapsed item retains a stronger inner bullet and lighter same-family outer ring.
 
 ### BT-003 — Decorate the editor
 
-For each configured tag on a visible source line, one outer decoration wraps Obsidian's internal syntax spans and renders the exact tag token as a continuous, modestly rounded label with vertically centered text. On a list-item line, only the bullet receives the family color, with a lighter same-family ring in the collapsed state.
+For each configured tag on a visible source line, one outer decoration wraps Obsidian's internal syntax spans and renders the exact tag token as a continuous, modestly rounded label with vertically centered text. The wrapper and internal syntax spans suppress borders and border-like shadows contributed by the active theme. On a list-item line, only the bullet receives the family color, with a lighter same-family ring in the collapsed state.
 
 ### BT-004 — Refresh without restart
 
